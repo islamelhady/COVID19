@@ -17,7 +17,6 @@ val networkModule = module {
         Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(MoshiConverterFactory.create(Moshi.Builder().add(KotlinJsonAdapterFactory()).build()))
-//            .client(getOkHttpClient(androidContext()))
             .build()
             .create(CovidService::class.java)
     }

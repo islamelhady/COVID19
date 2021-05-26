@@ -1,4 +1,4 @@
-package com.elhady.covid19.ui.main
+package com.elhady.covid19.ui
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
