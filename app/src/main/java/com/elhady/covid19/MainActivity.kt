@@ -1,4 +1,4 @@
-package com.elhady.weatherapp
+package com.elhady.covid19
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
