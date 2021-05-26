@@ -1,6 +1,6 @@
 package com.elhady.covid19.di
 
-import com.elhady.covid19.ui.MainViewModel
+import com.elhady.covid19.ui.view.MainViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

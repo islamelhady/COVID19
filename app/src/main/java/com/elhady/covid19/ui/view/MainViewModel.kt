@@ -1,4 +1,4 @@
-package com.elhady.covid19.ui
+package com.elhady.covid19.ui.view
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
