@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_global"
-        android:name="com.example.covid19.ui.global.GlobalFragment"
+        android:name="com.elhady.covid19.ui.global.GlobalFragment"
         android:label="@string/title_global"
         tools:layout="@layout/fragment_global" />
 
     <fragment
         android:id="@+id/navigation_countries"
-        android:name="com.example.covid19.ui.countries.CountriesFragment"
+        android:name="com.elhady.covid19.ui.countries.CountriesFragment"
         android:label="@string/title_countries"
         tools:layout="@layout/fragment_countries" />
 
     <fragment
         android:id="@+id/navigation_news"
-        android:name="com.example.covid19.ui.news.NewsFragment"
+        android:name="com.elhady.covid19.ui.news.NewsFragment"
         android:label="@string/title_news"
         tools:layout="@layout/fragment_news" />
 </navigation>

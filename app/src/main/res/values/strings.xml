@@ -3,4 +3,8 @@
     <string name="title_global">Global</string>
     <string name="title_countries">Countries</string>
     <string name="title_news">News</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
