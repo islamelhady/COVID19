@@ -3,27 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/activity_main2.xml" value="0.12037037037037036" />
-        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/fragment_countries.xml" value="0.2171875" />
-        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/fragment_dashboard.xml" value="0.12037037037037036" />
-        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/fragment_global.xml" value="0.1" />
-        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/fragment_home.xml" value="0.12037037037037036" />
-        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/fragment_news.xml" value="0.1" />
-        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/fragment_notifications.xml" value="0.1" />
-        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/menu/bottom_nav_menu.xml" value="0.12037037037037036" />
-        <entry key="..\:/Users/islam/Desktop/COVID19/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1" />
-        <entry key="..\:/Users/islam/Desktop/COVID19/app/src/main/res/drawable/ic_flag.xml" value="0.23333333333333334" />
-        <entry key="..\:/Users/islam/Desktop/COVID19/app/src/main/res/drawable/ic_global.xml" value="0.23333333333333334" />
-        <entry key="..\:/Users/islam/Desktop/COVID19/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1" />
-        <entry key="..\:/Users/islam/Desktop/COVID19/app/src/main/res/drawable/ic_news.xml" value="0.23333333333333334" />
-        <entry key="..\:/Users/islam/Desktop/COVID19/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1" />
-        <entry key="..\:/Users/islam/Desktop/COVID19/app/src/main/res/layout/activity_main.xml" value="0.18" />
-        <entry key="..\:/Users/islam/Desktop/COVID19/app/src/main/res/layout/fragment_dashboard.xml" value="0.2171875" />
-        <entry key="..\:/Users/islam/Desktop/COVID19/app/src/main/res/layout/fragment_global.xml" value="0.2171875" />
-        <entry key="..\:/Users/islam/Desktop/COVID19/app/src/main/res/layout/fragment_home.xml" value="0.2171875" />
-        <entry key="..\:/Users/islam/Desktop/COVID19/app/src/main/res/layout/fragment_notifications.xml" value="0.2171875" />
-        <entry key="..\:/Users/islam/Desktop/COVID19/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.23333333333333334" />
+        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/drawable/ic_flag.xml" value="0.23333333333333334" />
+        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/drawable/ic_global.xml" value="0.23333333333333334" />
+        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.23333333333333334" />
+        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/drawable/ic_news.xml" value="0.23333333333333334" />
+        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/activity_main.xml" value="0.2171875" />
+        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/fragment_dashboard.xml" value="0.2171875" />
+        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/fragment_home.xml" value="0.2171875" />
+        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/fragment_notifications.xml" value="0.2171875" />
+        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2171875" />
+        <entry key="..\:/Users/islam/Desktop/COVID19/app/src/main/res/layout/activity_main.xml" value="0.21384615384615385" />
+        <entry key="..\:/Users/islam/Desktop/COVID19/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2171875" />
       </map>
     </option>
   </component>

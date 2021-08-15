@@ -7,8 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.covid19.R
-import com.example.covid19.databinding.ActivityMainBinding
+import com.elhady.covid19.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.covid19.databinding.FragmentNewsBinding
+import com.elhady.covid19.databinding.FragmentNewsBinding
 
 class NewsFragment : Fragment() {
 
