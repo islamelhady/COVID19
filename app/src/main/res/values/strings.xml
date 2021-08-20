@@ -6,4 +6,11 @@
     <string name="title_global">Global</string>
     <string name="title_countries">Countries</string>
     <string name="title_news">News</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_faqs">FAQs</string>
+    <string name="title_sort">Sort</string>
+    <string name="title_search">Search</string>
+    <string name="search_hint">search</string>
+    <string name="button_who">button who</string>
+    <string name="button_world">button world</string>
 </resources>

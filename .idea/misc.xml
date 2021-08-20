@@ -8,11 +8,15 @@
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/drawable/ic_global.xml" value="0.23333333333333334" />
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.23333333333333334" />
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/drawable/ic_news.xml" value="0.23333333333333334" />
+        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/drawable/ic_search.xml" value="0.23333333333333334" />
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/activity_main.xml" value="0.2171875" />
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/fragment_dashboard.xml" value="0.2171875" />
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/fragment_home.xml" value="0.2171875" />
+        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/fragment_news.xml" value="0.2171875" />
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/fragment_notifications.xml" value="0.2171875" />
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2171875" />
+        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/menu/menu_countries.xml" value="0.2171875" />
+        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/menu/menu_home.xml" value="0.2171875" />
         <entry key="..\:/Users/islam/Desktop/COVID19/app/src/main/res/layout/activity_main.xml" value="0.21384615384615385" />
         <entry key="..\:/Users/islam/Desktop/COVID19/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2171875" />
       </map>
