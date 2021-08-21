@@ -1,4 +1,4 @@
-package com.elhady.covid19
+package com.elhady.covid19.ui
 
 import android.os.Bundle
 import android.view.View
@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.elhady.covid19.R
 import com.elhady.covid19.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
