@@ -17,6 +17,7 @@
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/drawable/ic_virus_red.xml" value="0.23333333333333334" />
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/activity_main.xml" value="0.12393162393162394" />
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/blank_fragment.xml" value="0.2171875" />
+        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/faqs_fragment.xml" value="0.2171875" />
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/fragment_countries.xml" value="0.103125" />
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/fragment_dashboard.xml" value="0.2171875" />
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/fragment_global.xml" value="0.14444444444444443" />
@@ -24,6 +25,7 @@
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/fragment_news.xml" value="0.2171875" />
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/fragment_notifications.xml" value="0.2171875" />
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/item_country.xml" value="0.2171875" />
+        <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/item_faq.xml" value="0.2171875" />
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/layout/settings_fragment.xml" value="0.2171875" />
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2171875" />
         <entry key="..\:/AndroidProjects/COVID19/app/src/main/res/menu/menu_countries.xml" value="0.2171875" />

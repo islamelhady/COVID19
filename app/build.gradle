@@ -72,6 +72,8 @@ dependencies {
 
     implementation "androidx.work:work-runtime-ktx:2.5.0"
 
+    implementation 'com.github.florent37:expansionpanel:1.2.3'
+
     // Koin for Kotlin
     implementation "org.koin:koin-core:2.1.5"
     // Koin for Android
