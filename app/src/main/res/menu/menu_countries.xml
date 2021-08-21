@@ -16,12 +16,12 @@
         app:showAsAction="collapseActionView|ifRoom" />
 
     <item
-        android:id="@+id/action_faqs"
+        android:id="@+id/faqsFragment"
         android:title="@string/title_faqs"
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/settingsFragment"
         android:title="@string/title_settings"
         app:showAsAction="never" />
 </menu>

@@ -22,4 +22,14 @@
         android:name="com.elhady.covid19.ui.news.NewsFragment"
         android:label="@string/title_news"
         tools:layout="@layout/fragment_news" />
+    <fragment
+        android:id="@+id/faqsFragment"
+        android:name="com.elhady.covid19.ui.faqs.FaqsFragment"
+        android:label="@string/faqs_fragments"
+        tools:layout="@layout/faqs_fragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.elhady.covid19.ui.settings.SettingsFragment"
+        android:label="@string/settings_fragment"
+        tools:layout="@layout/settings_fragment" />
 </navigation>

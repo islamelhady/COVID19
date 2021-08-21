@@ -13,4 +13,6 @@
     <string name="search_hint">search</string>
     <string name="button_who">button who</string>
     <string name="button_world">button world</string>
+    <string name="settings_fragment">Settings</string>
+    <string name="faqs_fragments">Faqs</string>
 </resources>

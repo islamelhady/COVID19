@@ -2,10 +2,10 @@ package com.elhady.covid19.ui.news
 
 import android.os.Bundle
 import android.view.*
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.elhady.covid19.R
 import com.elhady.covid19.databinding.FragmentNewsBinding
 
@@ -35,28 +35,13 @@ class NewsFragment : Fragment() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.menu_home, menu)
-        return super.onCreateOptionsMenu(menu, inflater)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.action_faqs -> {
-//                val action = NewsFragmentDirections
-//                    .actionNewsFragmentToFaqsFragment()
-//                NavHostFragment.findNavController(this@NewsFragment)
-//                    .navigate(action)
-                true
-            }
-            R.id.action_settings -> {
-//                val action = NewsFragmentDirections
-//                    .actionNewsFragmentToSettingsFragment()
-//                NavHostFragment.findNavController(this@NewsFragment)
-//                    .navigate(action)
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
+        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
+                || super.onOptionsItemSelected(item)
     }
 
     override fun onDestroyView() {
