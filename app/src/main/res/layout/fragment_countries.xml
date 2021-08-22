@@ -8,17 +8,18 @@
     </data>
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/parentLayout"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/windowBackground"
         tools:context=".ui.MainActivity">
 
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-            android:id="@+id/swipeRefreshLayout"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parentLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerCountries"
@@ -32,10 +33,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:listitem="@layout/item_country" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
 </layout>
