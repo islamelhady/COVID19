@@ -15,4 +15,8 @@
     <string name="button_world">WORLD</string>
     <string name="settings_fragment">Settings</string>
     <string name="faqs_fragments">Faqs</string>
+    <string name="notification_channel_id">Covid ID</string>
+    <string name="notification_channel_name">Covid-19 Stats</string>
+    <string name="text_confirmed_cases">Confirmed Cases : %s</string>
+    <string name="text_last_updated">Last Updated : %s</string>
 </resources>

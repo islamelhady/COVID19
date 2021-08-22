@@ -1,6 +1,9 @@
 package com.elhady.covid19.utils
 
 import android.annotation.SuppressLint
+import java.math.RoundingMode
+import java.text.DecimalFormat
+import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
@@ -48,4 +51,14 @@ fun getPeriod(past: Date): String {
 fun getPeriodWorldNews(past: String): String {
     val pastDate = SimpleDateFormat("E, dd MMM yyyy HH:mm:ss z").parse(past)
     return getPeriod(pastDate)
+}
+
+fun getFormattedNumber(amount: Int): String {
+    return NumberFormat.getNumberInstance(Locale.getDefault()).format(amount);
+}
+
+fun getFormattedNumber(amount: Double): String {
+    val df = DecimalFormat("#.##")
+    df.roundingMode = RoundingMode.FLOOR
+    return NumberFormat.getNumberInstance(Locale.getDefault()).format(df.format(amount).toDouble());
 }

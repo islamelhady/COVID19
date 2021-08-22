@@ -4,7 +4,7 @@ data class Global(
     val active: Int?,
     val activePerOneMillion: Double?,
     val affectedCountries: Int?,
-    val cases: Int?,
+    val cases: Int = 0,
     val casesPerOneMillion: Int?,
     val critical: Int?,
     val criticalPerOneMillion: Double?,
@@ -21,5 +21,5 @@ data class Global(
     val todayCases: Int?,
     val todayDeaths: Int?,
     val todayRecovered: Int?,
-    val updated: Long?
+    val updated: Long = 0L
 )

@@ -68,8 +68,8 @@ class NewsFragment : Fragment() {
                 }
             }
         })
-        viewModel.toggleButton.observe(viewLifecycleOwner, Observer { value ->
-            if (value == true){
+        viewModel.toggleButton.observe(viewLifecycleOwner, Observer {
+            if (it == true){
                 binding.toggleButton.check(R.id.buttonWorld)
             }else binding.toggleButton.check(R.id.buttonWho)
         })
