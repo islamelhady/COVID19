@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.preference.PreferenceCategory android:title="@string/title_notifications">
+
+        <androidx.preference.SwitchPreference
+            android:icon="@drawable/ic_tone_notifications"
+            android:key="@string/pref_key_notifications"
+            android:persistent="true"
+            android:summary="@string/settings_notifications_description"
+            android:title="@string/settings_notifications_title" />
+
+        <androidx.preference.ListPreference
+            android:dialogTitle="@string/settings_notifications_frequency_title"
+            android:entries="@array/intervals"
+            android:entryValues="@array/interval_values"
+            android:icon="@drawable/ic_timer"
+            android:key="@string/pref_key_intervals"
+            android:summary="@string/settings_notifications_frequency_description"
+            android:title="@string/settings_notifications_frequency_title" />
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory android:title="@string/settings_category_theme">
+        <androidx.preference.ListPreference
+            android:dialogTitle="@string/settings_theme_title"
+            android:entries="@array/themes"
+            android:entryValues="@array/themes_values"
+            android:icon="@drawable/ic_theme"
+            android:key="@string/pref_key_theme_picker"
+            android:title="@string/settings_theme_title" />
+
+    </androidx.preference.PreferenceCategory>
+
+
+    <PreferenceCategory android:title="@string/settings_category_about">
+
+        <Preference
+            android:selectable="false"
+            android:summary="@string/settings_about_description" />
+
+        <Preference
+            android:key="@string/pref_key_version"
+            android:title="@string/settings_version_title"
+            android:summary="@string/settings_version_description"/>
+
+        <Preference
+            android:summary="@string/settings_developer_description"
+            android:title="@string/settings_developer_title">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/url_github" />
+        </Preference>
+
+        <Preference
+            android:key="@string/pref_key_send_feedback"
+            android:summary="@string/settings_feedback_title"
+            android:title="@string/settings_feedback_description" />
+
+        <Preference android:title="@string/settings_privacy_policy_title">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/url_privacy" />
+        </Preference>
+
+        <Preference android:title="@string/settings_terms_title">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/url_terms" />
+        </Preference>
+
+        <Preference android:title="@string/settings_open_source_title">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/url_github_project" />
+        </Preference>
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

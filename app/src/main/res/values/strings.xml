@@ -19,4 +19,39 @@
     <string name="notification_channel_name">Covid-19 Stats</string>
     <string name="text_confirmed_cases">Confirmed Cases : %s</string>
     <string name="text_last_updated">Last Updated : %s</string>
+    <string name="settings_notifications_description">We notify you about Covid-19 Cases. Once turned off, Covid-19 notifications from this app will not be displayed on the notification bar or lock screen.</string>
+    <string name="settings_notifications_title">Push notifications</string>
+    <string name="settings_notifications_frequency_title">Frequency</string>
+
+    <string name="settings_interval_half_hour">30 minutes</string>
+    <string name="settings_interval_one_hour">1 hour</string>
+    <string name="settings_interval_one_day">1 day</string>
+    <string name="settings_interval_one_week">1 week</string>
+    <string name="settings_notifications_frequency_description">The application sends you Covid-19 updates at a certain interval. Click to specify the frequency</string>
+
+    <string name="settings_category_theme">Theme</string>
+    <string name="settings_theme_title">Pick theme</string>
+    <string name="settings_theme_light">Light</string>
+    <string name="settings_theme_dark">Dark</string>
+    <string name="settings_theme_default">Follow OS settings</string>
+    <string name="pref_key_theme_picker">pref_theme_picker</string>
+    <string name="settings_category_about">About</string>
+    <string name="settings_about_description">The Covid-19 Stats app is an Android application that aims at providing reliable statistics and news about the Covid-19 pandemic while fighting misinformation. We are grateful to the following sources: Worldometers.info and The World Health Organization</string>
+    <string name="settings_version_title">Version</string>
+    <string name="settings_version_description">1.0.0v</string>
+    <string name="settings_developer_description">Islam Elhady</string>
+    <!-- Preference Titles -->
+    <string name="settings_developer_title">Developer</string>
+    <string name="settings_feedback_title">Send feedback</string>
+    <string name="settings_feedback_description">Got any queries? We are happy to help!</string>
+    <string name="settings_privacy_policy_title">Privacy policy</string>
+
+    <string name="url_github">https://github.com/islamelhady</string>
+    <string name="url_github_project">https://github.com/islamelhady/Covid19</string>
+    <string name="url_privacy">https://covid-19-stats-0.flycricket.io/privacy.html</string>
+    <string name="settings_terms_title">Terms &amp; Conditions</string>
+    <string name="url_terms">https://covid-19-stats-0.flycricket.io/terms.html</string>
+    <string name="settings_open_source_title">Open Source</string>
+
+
 </resources>
