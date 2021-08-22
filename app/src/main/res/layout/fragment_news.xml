@@ -10,7 +10,8 @@
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefreshLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/windowBackground">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -21,6 +22,7 @@
                 android:id="@+id/headerLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/post_background"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -30,7 +32,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/dimen_16"
                     app:selectionRequired="true"
                     app:singleSelection="true">
 
@@ -40,8 +42,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/button_world"
-                        android:textColor="@color/cardview_shadow_start_color"
-                        app:strokeColor="@color/cardview_shadow_end_color" />
+                        android:textColor="@color/toggle_button_colors"
+                        app:strokeColor="@color/toggle_button_colors" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/buttonWho"
@@ -49,25 +51,26 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/button_who"
-                        android:textColor="@color/cardview_dark_background"
-                        app:strokeColor="@color/cardview_shadow_start_color" />
+                        android:textColor="@color/toggle_button_colors"
+                        app:strokeColor="@color/toggle_button_colors" />
 
                 </com.google.android.material.button.MaterialButtonToggleGroup>
             </FrameLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler"
+                android:id="@+id/recyclerNews"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginTop="1dp"
                 android:clipToPadding="false"
-                android:elevation="16dp"
+                android:layout_marginTop="@dimen/dimen_1"
                 android:scrollbars="vertical"
+                android:elevation="@dimen/dimen_16"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/headerLayout" />
+                app:layout_constraintTop_toBottomOf="@id/headerLayout"
+                tools:listitem="@layout/item_news" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 

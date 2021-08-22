@@ -72,6 +72,11 @@ dependencies {
 
     implementation "androidx.work:work-runtime-ktx:2.5.0"
 
+    // DataStore
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+
+    implementation 'com.prof.rssparser:rssparser:2.1.2'
+
     implementation 'com.github.florent37:expansionpanel:1.2.3'
 
     // Koin for Kotlin

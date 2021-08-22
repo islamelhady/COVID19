@@ -16,6 +16,6 @@ val viewModelModule = module {
     }
 
     viewModel {
-        NewsViewModel(get())
+        NewsViewModel(get(),get())
     }
 }

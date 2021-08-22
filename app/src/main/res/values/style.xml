@@ -8,14 +8,12 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/dark_yellow</item>
         <item name="android:statusBarColor">@color/statusBarColor</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">true
-        </item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
 
     </style>
 
     <style name="TextCountSmall">
-        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle2
-        </item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle2</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_margin">4dp</item>
@@ -32,8 +30,33 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:textStyle">italic</item>
         <item name="android:textColor">@color/textColorSecondary</item>
-        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Overline
-        </item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Overline</item>
     </style>
+
+    <style name="NewsDateText">
+        <item name="android:layout_marginStart">@dimen/dimen_16</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_16</item>
+        <item name="android:layout_marginTop">@dimen/dimen_8</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="NewsTitleText">
+        <item name="android:layout_marginStart">@dimen/dimen_16</item>
+        <item name="android:layout_marginTop">@dimen/dimen_16</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_16</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1</item>
+    </style>
+
+    <style name="PostImage">
+        <item name="android:layout_marginTop">@dimen/dimen_16</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_16</item>
+        <item name="android:layout_marginBottom">@dimen/dimen_16</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
 
 </resources>

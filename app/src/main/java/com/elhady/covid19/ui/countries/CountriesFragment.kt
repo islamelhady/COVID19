@@ -2,13 +2,11 @@ package com.elhady.covid19.ui.countries
 
 import android.os.Bundle
 import android.view.*
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.MenuItemCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
@@ -37,10 +35,16 @@ class CountriesFragment : Fragment() {
         setupAdapter()
         initData()
 
+
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         binding.swipeRefreshLayout.setOnRefreshListener {
             loadData()
         }
-        return binding.root
     }
 
     private fun setupAdapter() {
@@ -67,7 +71,7 @@ class CountriesFragment : Fragment() {
                     Toast.makeText(requireContext(), state.message, Toast.LENGTH_LONG).show()
                 }
                 is State.Success -> {
-                    if (state.data?.isNotEmpty()!!)
+                    if (state.data.isNotEmpty())
                         adapter?.submitList(state.data)
                     else
                         Toast.makeText(activity, "No Data", Toast.LENGTH_SHORT).show()
@@ -75,21 +79,18 @@ class CountriesFragment : Fragment() {
 //                    val list = state.data.country
 //                    adapter?.submitList(list)
 //                    binding.swipeRefreshLayout.isRefreshing = false
-//                    scrollToTop()
+                    scrollToTop()
                 }
             }
         })
+        loadData()
     }
 
-//    private fun scrollToTop() {
-//        lifecycleScope.launch(Dispatchers.Main) {
-//            delay(300)
-//            binding.recyclerCountries.scrollToPosition(0)
-//        }
-//    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    private fun scrollToTop() {
+        lifecycleScope.launch(Dispatchers.Main) {
+            delay(300)
+            binding.recyclerCountries.scrollToPosition(0)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

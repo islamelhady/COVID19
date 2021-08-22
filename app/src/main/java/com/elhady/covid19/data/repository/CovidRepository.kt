@@ -6,12 +6,16 @@ import com.elhady.covid19.data.model.Global
 import com.elhady.covid19.data.model.NewsResponse
 import com.elhady.covid19.data.remote.ApiService
 import com.elhady.covid19.utils.State
+import com.prof.rssparser.Article
+import com.prof.rssparser.Parser
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOn
 import retrofit2.Response
 
-class CovidRepository(private val apiService: ApiService) {
+class CovidRepository(private val apiService: ApiService
+//, private val parser: Parser
+) {
 
     fun getAllCountriesData(): Flow<State<List<CountriesItem>>> {
         return object : NetworkBoundRepository<List<CountriesItem>>() {
@@ -39,4 +43,11 @@ class CovidRepository(private val apiService: ApiService) {
                 apiService.getNews(url)
         }.asFlow().flowOn(Dispatchers.IO)
     }
+
+//    fun getWorldNews(url: String): Flow<State<NewsResponse>> {
+//        return object : WorldNewsBoundRepository() {
+//            override suspend fun fetchFromRemote(): MutableList<Article> =
+//                parser.getChannel(url).articles
+//        }.asFlow().flowOn(Dispatchers.IO)
+//    }
 }
