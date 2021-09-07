@@ -16,7 +16,7 @@ class NotificationWorkerManager(private val workManager: WorkManager) {
 
     fun initialize(interval: Long) {
         notificationWorkRequest =
-            PeriodicWorkRequestBuilder<NotificationWorker>(interval, TimeUnit.HOURS)
+            PeriodicWorkRequestBuilder<NotificationWorker>(interval, TimeUnit.MINUTES)
                 .setConstraints(constraints)
                 .build()
         start()
