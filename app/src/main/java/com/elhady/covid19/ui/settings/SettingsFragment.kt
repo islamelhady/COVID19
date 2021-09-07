@@ -18,10 +18,11 @@ import androidx.preference.SwitchPreference
 import com.elhady.covid19.R
 import com.elhady.covid19.ui.binding.addOnPropertyChanged
 import com.elhady.covid19.utils.SettingsEvent
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
-    private lateinit var viewModel: SettingsViewModel
+    private val viewModel: SettingsViewModel by viewModel()
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences, rootKey)
