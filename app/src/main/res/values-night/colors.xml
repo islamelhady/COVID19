@@ -1,2 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <color name="colorPrimary">#001719</color>
+    <color name="windowBackground">#001719</color>
+    <color name="statusBarColor">#001719</color>
+
+    <color name="textColor">@android:color/white</color>
+    <color name="textColorFaq">@android:color/white</color>
+    <color name="backgroundWhite">#001719</color>
+    <color name="textColorSecondary">@android:color/secondary_text_dark</color>
+
+    <color name="light_red">#0DFFFFFF</color>
+    <color name="light_green">#0DFFFFFF</color>
+    <color name="light_blue">#0DFFFFFF</color>
+    <color name="light_yellow">#0DFFFFFF</color>
+
+    <color name="dark_red">@android:color/white</color>
+    <color name="dark_green">@android:color/white</color>
+    <color name="dark_blue">@android:color/white</color>
+    <color name="dark_yellow">@android:color/white</color>
+
+    <color name="post_background">#0DFFFFFF</color>
+    <color name="textDarkPrimary">#DEFFFFFF</color>
+    <color name="textDarkPrimary60">#85FFFFFF</color>
+
+    <color name="imageBackgroundTint">#006064</color>
+</resources>
