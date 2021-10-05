@@ -10,6 +10,8 @@
         <item name="android:statusBarColor">@color/statusBarColor</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">@bool/windowLightStatusBar</item>
 
+        <item name="fontFamily">@font/google_sans</item>
+
     </style>
 
     <style name="TextCountSmall">

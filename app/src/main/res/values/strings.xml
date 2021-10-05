@@ -23,6 +23,7 @@
     <string name="settings_notifications_title">Push notifications</string>
     <string name="settings_notifications_frequency_title">Frequency</string>
 
+    <!--Settings-->
     <string name="settings_interval_half_hour">30 minutes</string>
     <string name="settings_interval_one_hour">1 hour</string>
     <string name="settings_interval_one_day">1 day</string>
