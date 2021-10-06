@@ -15,7 +15,11 @@
         android:id="@+id/navigation_countries"
         android:name="com.elhady.covid19.ui.countries.CountriesFragment"
         android:label="@string/title_countries"
-        tools:layout="@layout/fragment_countries" />
+        tools:layout="@layout/fragment_countries" >
+        <action
+            android:id="@+id/action_navigation_countries_to_countryDetailsFragment"
+            app:destination="@id/countryDetailsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_news"
@@ -31,4 +35,13 @@
         android:id="@+id/settingsFragment"
         android:name="com.elhady.covid19.ui.settings.SettingsFragment"
         android:label="@string/settings_fragment" />
+    <fragment
+        android:id="@+id/countryDetailsFragment"
+        android:name="com.elhady.covid19.ui.countries.CountryDetailsFragment"
+        android:label="fragment_country_details"
+        tools:layout="@layout/fragment_country_details" >
+        <argument
+            android:name="country"
+            app:argType="com.elhady.covid19.data.model.Country" />
+    </fragment>
 </navigation>

@@ -60,5 +60,55 @@
         <item name="android:scaleType">centerCrop</item>
     </style>
 
+    <style name="LayoutStyle">
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">@dimen/dimen_16</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="TextToday">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Overline
+        </item>
+    </style>
+
+    <style name="ImageIcon">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:tint">@android:color/white</item>
+    </style>
+
+    <style name="TextCount">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline4
+        </item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="TextTitle">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body1
+        </item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="TextLastUpdatedTime">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Overline
+        </item>
+    </style>
+
+    <style name="TextLastUpdatedTimeList">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/textColorSecondary</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Overline
+        </item>
+    </style>
+
 
 </resources>

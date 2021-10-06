@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import com.elhady.covid19.databinding.FaqsFragmentBinding
-import com.elhady.covid19.ui.adapter.FaqsAdapter
 import com.elhady.covid19.utils.State
 import org.koin.android.viewmodel.ext.android.viewModel
 

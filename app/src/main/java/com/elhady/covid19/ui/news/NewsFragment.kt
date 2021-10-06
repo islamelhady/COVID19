@@ -9,7 +9,6 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.elhady.covid19.R
 import com.elhady.covid19.databinding.FragmentNewsBinding
-import com.elhady.covid19.ui.adapter.NewsAdapter
 import com.elhady.covid19.utils.State
 import org.koin.android.viewmodel.ext.android.viewModel
 

@@ -9,21 +9,26 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
+import androidx.recyclerview.widget.MergeAdapter
 import com.elhady.covid19.R
+import com.elhady.covid19.data.model.Country
 import com.elhady.covid19.databinding.FragmentCountriesBinding
-import com.elhady.covid19.ui.adapter.CountryAdapter
 import com.elhady.covid19.utils.State
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.koin.android.viewmodel.ext.android.viewModel
 
-class CountriesFragment : Fragment() {
+class CountriesFragment : Fragment(), CountryAdapter.OnItemClickListener  {
 
     private lateinit var binding: FragmentCountriesBinding
     private val viewModel: CountriesViewModel by viewModel()
-    private var adapter: CountryAdapter? = null
+//    private val prefs: SharedPreferences by inject()
+    private val countryAdapter = CountryAdapter(onItemClickListener = this)
+    private val adapter = MergeAdapter(countryAdapter)
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,7 +37,7 @@ class CountriesFragment : Fragment() {
     ): View? {
         binding = FragmentCountriesBinding.inflate(inflater)
         setHasOptionsMenu(true)
-        setupAdapter()
+        binding.recyclerCountries.adapter = adapter
         initData()
 
 
@@ -47,19 +52,8 @@ class CountriesFragment : Fragment() {
         }
     }
 
-    private fun setupAdapter() {
-        adapter = CountryAdapter()
-        // Sets the adapter of the RecyclerView
-        binding.recyclerCountries.adapter = adapter
-        postponeEnterTransition()
-        binding.recyclerCountries.viewTreeObserver.addOnPreDrawListener {
-            startPostponedEnterTransition()
-            true
-        }
-    }
-
     private fun loadData() {
-        viewModel.getAllCountriesData()
+        viewModel.getAllCountriesData(getString(R.string.pref_sort))
     }
 
     private fun initData() {
@@ -71,19 +65,34 @@ class CountriesFragment : Fragment() {
                     Toast.makeText(requireContext(), state.message, Toast.LENGTH_LONG).show()
                 }
                 is State.Success -> {
-                    if (state.data.isNotEmpty())
-                        adapter?.submitList(state.data)
-                    else
-                        Toast.makeText(activity, "No Data", Toast.LENGTH_SHORT).show()
+                    val list = state.data
+                    countryAdapter.submitList(list)
                     binding.swipeRefreshLayout.isRefreshing = false
-//                    val list = state.data.country
-//                    adapter?.submitList(list)
-//                    binding.swipeRefreshLayout.isRefreshing = false
                     scrollToTop()
                 }
             }
         })
+        viewModel.covidAllCountriesDataSearch.observe(viewLifecycleOwner, Observer { state ->
+            when (state) {
+                is State.Loading -> binding.swipeRefreshLayout.isRefreshing = true
+                is State.Error -> binding.swipeRefreshLayout.isRefreshing = false
+                is State.Success -> {
+                    val item = state.data
+                    countryAdapter.submitList(listOf(item))
+                    binding.swipeRefreshLayout.isRefreshing = false
+                    scrollToTop()
+                }
+            }
+        })
+
         loadData()
+    }
+
+    override fun onItemClicked(country: Country) {
+//        tracker.track(CountryClickEvent(country.country.toString()))
+        val action = CountriesFragmentDirections.actionNavigationCountriesToCountryDetailsFragment(country)
+        NavHostFragment.findNavController(this@CountriesFragment)
+            .navigate(action)
     }
 
     private fun scrollToTop() {
@@ -94,12 +103,35 @@ class CountriesFragment : Fragment() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.menu_countries, menu)
 
+        var queryTextChangedJob: Job? = null
         val searchItem = menu.findItem(R.id.action_search)
         val searchView = MenuItemCompat.getActionView(searchItem) as SearchView
         searchView.queryHint = getString(R.string.search_hint)
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                query?.let {
+                    viewModel.getAllCountriesData(query, false)
+                }
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                newText?.let {
+                    if (newText.length > 1) {
+                        queryTextChangedJob?.cancel()
+
+                        queryTextChangedJob = lifecycleScope.launch(Dispatchers.Main) {
+                            delay(500)
+                            viewModel.getAllCountriesData(newText, false)
+                        }
+                    }
+                }
+                return false
+            }
+        })
+        return super.onCreateOptionsMenu(menu, inflater)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

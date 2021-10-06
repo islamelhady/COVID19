@@ -1,13 +1,8 @@
 package com.elhady.covid19.data.repository
 
-import com.elhady.covid19.data.model.CountriesItem
-import com.elhady.covid19.data.model.FaqResponse
-import com.elhady.covid19.data.model.Global
-import com.elhady.covid19.data.model.NewsResponse
+import com.elhady.covid19.data.model.*
 import com.elhady.covid19.data.remote.ApiService
 import com.elhady.covid19.utils.State
-import com.prof.rssparser.Article
-import com.prof.rssparser.Parser
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOn
@@ -17,10 +12,24 @@ class CovidRepository(private val apiService: ApiService
 //, private val parser: Parser
 ) {
 
-    fun getAllCountriesData(): Flow<State<List<CountriesItem>>> {
-        return object : NetworkBoundRepository<List<CountriesItem>>() {
-            override suspend fun fetchFromRemote(): Response<List<CountriesItem>> =
-                apiService.getAllCountriesData()
+    fun getAllCountriesData(sort: String): Flow<State<List<Country>>> {
+        return object : NetworkBoundRepository<List<Country>>() {
+            override suspend fun fetchFromRemote(): Response<List<Country>> =
+                apiService.getAllCountriesData(sort)
+        }.asFlow().flowOn(Dispatchers.IO)
+    }
+
+    fun getAllCountriesData(country: String, strict: Boolean): Flow<State<Country>> {
+        return object : NetworkBoundRepository<Country>() {
+            override suspend fun fetchFromRemote(): Response<Country> =
+                apiService.getAllCountriesData(country, strict)
+        }.asFlow().flowOn(Dispatchers.IO)
+    }
+
+    fun getCountryHistoricalData(country: String): Flow<State<History>> {
+        return object : NetworkBoundRepository<History>() {
+            override suspend fun fetchFromRemote(): Response<History> =
+                apiService.getCountryHistoricalData(country)
         }.asFlow().flowOn(Dispatchers.IO)
     }
 

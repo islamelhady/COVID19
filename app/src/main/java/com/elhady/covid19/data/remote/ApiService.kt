@@ -1,17 +1,22 @@
 package com.elhady.covid19.data.remote
 
-import com.elhady.covid19.data.model.CountriesItem
-import com.elhady.covid19.data.model.FaqResponse
-import com.elhady.covid19.data.model.Global
-import com.elhady.covid19.data.model.NewsResponse
+import com.elhady.covid19.data.model.*
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Path
+import retrofit2.http.Query
 import retrofit2.http.Url
 
 interface ApiService {
 
-    @GET("v2/countries")
-    suspend fun getAllCountriesData(): Response<List<CountriesItem>>
+    @GET("/v2/countries")
+    suspend fun getAllCountriesData(@Query("sort") sort: String): Response<List<Country>>
+
+    @GET("/v2/countries/{country}")
+    suspend fun getAllCountriesData(@Path("country") country: String, @Query("strict") strict: Boolean): Response<Country>
+
+    @GET("/v2/historical/{country}")
+    suspend fun getCountryHistoricalData(@Path("country") country: String): Response<History>
 
     @GET("/v2/all")
     suspend fun getGlobalData(): Response<Global>

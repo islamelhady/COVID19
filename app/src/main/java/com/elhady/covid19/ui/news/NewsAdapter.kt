@@ -1,4 +1,4 @@
-package com.elhady.covid19.ui.adapter
+package com.elhady.covid19.ui.news
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
