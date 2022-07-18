@@ -5,6 +5,18 @@
 
 The sample Android application 📱 is built to demonstrate use of *Modern Android development* tools. Dedicated to all Android Developers with ❤ .
 
+## Screenshots
+<h4 align="center">
+<img src="screens/countries-dark.png" width="25%">
+<img src="screens/countries-light.png" width="25%">
+<img src="screens/faqs-dark.png" width="25%">
+<img src="screens/faqs-light.png" width="25%">
+<img src="screens/news-dark.png" width="25%">
+<img src="screens/news-light.png" width="25%">
+<img src="screens/overview-dark.png" width="25%">
+<img src="screens/overview-light.png" width="25%">
+<img src="screens/settings-dark.png" width="25%">
+<img src="screens/settings-light.png" width="25%">
 
 ## About
 - It loads **Total COVID19 cases worldwide** from [API](https://github.com/NovelCOVID/API).
