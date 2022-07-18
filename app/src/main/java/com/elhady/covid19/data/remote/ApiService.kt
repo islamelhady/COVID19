@@ -21,6 +21,9 @@ interface ApiService {
     @GET("/v2/all")
     suspend fun getGlobalData(): Response<Global>
 
+    @GET("/v2/historical/all")
+    suspend fun getAllHistoricalData(): Response<Timeline>
+
     @GET
     suspend fun getFaqs(@Url url: String): Response<FaqResponse>
 

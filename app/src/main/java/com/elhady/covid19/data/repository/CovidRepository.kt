@@ -53,6 +53,13 @@ class CovidRepository(private val apiService: ApiService
         }.asFlow().flowOn(Dispatchers.IO)
     }
 
+    fun getAllHistoricalData(): Flow<State<Timeline>> {
+        return object : NetworkBoundRepository<Timeline>() {
+            override suspend fun fetchFromRemote(): Response<Timeline> =
+                apiService.getAllHistoricalData()
+        }.asFlow().flowOn(Dispatchers.IO)
+    }
+
 //    fun getWorldNews(url: String): Flow<State<NewsResponse>> {
 //        return object : WorldNewsBoundRepository() {
 //            override suspend fun fetchFromRemote(): MutableList<Article> =

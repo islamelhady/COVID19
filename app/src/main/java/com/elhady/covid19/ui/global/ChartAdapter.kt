@@ -1,4 +1,4 @@
-package com.elhady.covid19.ui.countries
+package com.elhady.covid19.ui.global
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,17 +6,16 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.elhady.covid19.R
-import com.elhady.covid19.data.model.History
-import com.elhady.covid19.databinding.ItemCountryChartBinding
+import com.elhady.covid19.data.model.Timeline
+import com.elhady.covid19.databinding.ItemChartBinding
 import java.text.SimpleDateFormat
 import java.util.*
 
 
-class CountryChartAdapter :
-    ListAdapter<History, CountryChartAdapter.ChartViewHolder>(DIFF_CALLBACK) {
+class ChartAdapter : ListAdapter<Timeline, ChartAdapter.ChartViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ChartViewHolder(
-        ItemCountryChartBinding.inflate(
+        ItemChartBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
             false
@@ -27,33 +26,31 @@ class CountryChartAdapter :
         holder.bind(getItem(position))
 
 
-    class ChartViewHolder(private val binding: ItemCountryChartBinding) :
+    class ChartViewHolder(private val binding: ItemChartBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         private val mFormat = SimpleDateFormat("MM/dd/yy", Locale.ENGLISH)
 
-        fun bind(history: History) {
-            binding.textCasesTitle.text = "Country Cases"
-
+        fun bind(timeline: Timeline) {
 //            val entriesCases = ArrayList<Entry>()
 //            val entriesDeaths = ArrayList<Entry>()
 //            val entriesRecoveries = ArrayList<Entry>()
-//
-//            history.timeline?.cases?.entries?.forEach {
+
+//            timeline.cases?.entries?.forEach {
 //                val date = mFormat.parse(it.key)
 //                entriesCases.add(Entry(date.time.toFloat(), it.value.toFloat()))
 //            }
-//
-//            history.timeline?.deaths?.entries?.forEach {
+
+//            timeline.deaths?.entries?.forEach {
 //                val date = mFormat.parse(it.key)
 //                entriesDeaths.add(Entry(date.time.toFloat(), it.value.toFloat()))
 //            }
-//
-//            history.timeline?.recovered?.entries?.forEach {
+
+//            timeline.recovered?.entries?.forEach {
 //                val date = mFormat.parse(it.key)
 //                entriesRecoveries.add(Entry(date.time.toFloat(), it.value.toFloat()))
 //            }
-//
+
 //            setupCombinedChart(
 //                binding.lineChartCombined,
 //                entriesCases,
@@ -93,6 +90,7 @@ class CountryChartAdapter :
 //
 //            val adRequestFour = AdRequest.Builder().build()
 //            binding.adViewFour.loadAd(adRequestFour)
+
         }
 
 //        private fun setupCombinedChart(
@@ -129,7 +127,7 @@ class CountryChartAdapter :
 //
 //            //Part3
 //            chart.xAxis.labelRotationAngle = 0f
-//            chart.xAxis.granularity = 2000f
+//            chart.xAxis.granularity = 20000f
 //            chart.xAxis.setDrawGridLines(false)
 //            chart.xAxis.valueFormatter = object : ValueFormatter() {
 //                override fun getFormattedValue(value: Float): String {
@@ -148,6 +146,7 @@ class CountryChartAdapter :
 //            //Part7
 //            chart.axisRight.isEnabled = false
 //            chart.xAxis.axisMaximum = entriesCases.last().x + 2000f
+//            chart.xAxis.axisMinimum = entriesCases.map { it.x }.min() ?: 0f
 //            chart.description.isEnabled = false
 //            chart.xAxis.textColor = chart.context.resources.getColor(R.color.textColor)
 //            chart.legend.textColor = chart.context.resources.getColor(R.color.textColorSecondary)
@@ -192,7 +191,7 @@ class CountryChartAdapter :
 //
 //            //Part3
 //            chart.xAxis.labelRotationAngle = 0f
-//            chart.xAxis.granularity = 1000f
+//            chart.xAxis.granularity = 20000f
 //            chart.xAxis.setDrawGridLines(false)
 //            chart.xAxis.valueFormatter = object : ValueFormatter() {
 //                override fun getFormattedValue(value: Float): String {
@@ -210,7 +209,8 @@ class CountryChartAdapter :
 //
 //            //Part7
 //            chart.axisRight.isEnabled = false
-//            chart.xAxis.axisMaximum = entries.last().x + 720f
+//            chart.xAxis.axisMaximum = entries.last().x + 2000f
+//            chart.xAxis.axisMinimum = entries.map { it.x }.min() ?: 0f
 //            chart.description.isEnabled = false
 //            chart.xAxis.textColor = chart.context.resources.getColor(R.color.textColor)
 //            chart.legend.textColor = chart.context.resources.getColor(R.color.textColorSecondary)
@@ -236,11 +236,11 @@ class CountryChartAdapter :
     }
 
     companion object {
-        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<History>() {
-            override fun areItemsTheSame(oldItem: History, newItem: History): Boolean =
-                oldItem.timeline?.cases == newItem.timeline?.cases
+        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Timeline>() {
+            override fun areItemsTheSame(oldItem: Timeline, newItem: Timeline): Boolean =
+                oldItem.cases == newItem.cases
 
-            override fun areContentsTheSame(oldItem: History, newItem: History): Boolean =
+            override fun areContentsTheSame(oldItem: Timeline, newItem: Timeline): Boolean =
                 oldItem == newItem
 
         }
